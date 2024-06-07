@@ -1,123 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIW - Material Complementar</title>
+<html lang="pt-br">
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Desenvolvimento de Interfaces Web</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Site pessoal</title>
 </head>
+
 <body>
-  <main>
-    <div class="container">
-      <h1>Desenvolvimento de Interfaces Web</h1>
-      <p>Sejam bem-vindos ao repositório de orientação para a disciplina de Desenvolvimento de Intefaces Web (DIW) dos cursos de TI da PUC Minas.</p>
-      <p>A estrutura desse ambiente é apresentada pela Figura a seguir, em que podemos visualizar que o servidor mantido pelo Replit é dividido em duas partes: arquivos estáticos (front end) e JSONServer (back end)
-        <img src="./assets/images/arquitetura_ambiente.png" alt="Arquitetura do ambiente JSONServer no Replit" class="img-fluid">
-      </p>
-      <p>Abraços, Prof. Rommel Carneiro <a href="https://www.linkedin.com/in/rommelcarneiro/" title="Perfil no Linkedin" target="_blank"><i class="bi bi-linkedin"></i></a> <a href="https://rommelcarneiro.me/" title="Site rommelcarneiro.me"  target="_blank"><i class="bi bi-person-lines-fill"></i></a></p>
-      <h2>Material Complementar</h2>
-      <p>Este material acompanha a disciplina de DIW  e fornecem orientações para a construção de aplicações simplificadas com uso do <a href="https://github.com/typicode/json-server" target="_blank">JSONServer</a> como backend.</p>
-      <p>Disponibilizamos alguns vídeos sobre a programação de funcionalidades com JavaScript, JSON e JSONServer que vai mostrar informações relevantes para vocês nessa etapa. Os vídeos são listados a seguir:
-      </p>
+  <header class="cabecalho">
+    <h1><a href="#" class="logo">Marcos Alberto</a></h1>
+    <nav class="menu">
       <ul>
-        <li>Sequência 1 - Projeto de aplicação com JavaScript, JSON e Local Storage <a href="https://drive.google.com/file/d/1XCG-gt9RmJuE4emVqowYXU9aFTmdeEIi/view" title="Código Fonte" target="_blank"><i class="bi bi-download"></i></a>
-          <ul>
-            <li><a href="https://www.loom.com/share/da5ff9cc1e674bec9f85da058e3631c6">Banco de Dados com JSON e Local Storage</a></li>
-          </ul>
-        </li>
-        <li>Sequência 2 - Projeto completo com JavaScript, JSON e AJAX <a href="https://drive.google.com/file/d/1KrnaFnMEQ1bvyH3ijncL12B7fyMhPkB_/view" title="Código Fonte" target="_blank"><i class="bi bi-download"></i></a>
-          <ul>
-            <li><a href="https://drive.google.com/file/d/1bzPVkQTe_KLWLzKAK008SKVHFeMTAseH/view" target="_blank">Iniciando um projeto com HTML e CSS (Parte 1/3)</a></li>
-            <li><a href="https://drive.google.com/file/d/1NT3OtQz_fJ1RgiuMq4QXf2ZT6ulZ58C6/view" target="_blank">Manipulando dados com JavaScript e JSON (Parte 2/3)</a></li>
-            <li><a href="https://drive.google.com/file/d/1aYhm0E3gn0LfauSpEoBj3AN2ilWuVs_B/view" target="_blank">Obtendo dados em JSON via AJAX (Parte 3/3)</a></li>
-          </ul>
-          </li>
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#repositorios">Repositórios</a></li>
+        <li><a href="#conteudo-sugerido">Conteúdo Sugerido</a></li>
       </ul>
+    </nav>
+  </header>
 
-      <p>Os exemplos de código são apresentados a seguir e podem ser utilizados pelos alunos para estudo e como base para as implementações a serem feitas na disciplina. Replique esse respositório e faça as alterações necessárias para o projeto de sua equipe.</p>
+  <main>
+    <section id="perfil" class="perf">
+      <h2>Perfil</h2>
+      <hr>
+      <div class="imagem-texto">
+        <img src="assets/img/foto_de_perfil.jpg" alt="imagem de perfil" width="160px" height="160px">
+        <div class="texto">
+          <h3>Marcos Alberto Ferreira Pinto</h3>
+          <p>Estudante do curso de Engenharia de Software, gosto de tecnologia e de inovação. Habilidades iniciais em
+            HTML e CSS e linguagem C, desenvolvimento de software e algoritmos. Experiência em atividades
+            extracurriculares.
+            Busca constante por aprendizado e aperfeiçoamento, capaz de solucionar desafios do mundo real.</p>
+          <div class="icone">
+            <div class="tex">
+            <p><strong>Localização:</strong> Santa Luzia, MG, Brasil</p>
+            <p><strong>E-mail:</strong> marcosferralbe@gmail.com</p>
+            </div>
+            <div class="comp"><i class="fa-solid fa-users fa-2x"></i>
+              <p>30</p>
+            </div>
+          </div>
+          <div class="redes-sociais">
+            <a href="https://www.tiktok.com/@marcos_alber?_t=8lUp9ud8zXZ&_r=1" target="_blank"><i
+                class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.twitch.tv/marcos_fkp" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+            <a href="https://www.instagram.com/marcos.fkp?igsh=MW44MmpucDBvMzd0cA==" target="_blank"><i
+                class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <h2>Exemplos de Códigos</h2>
-      <div class="bd-content">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+    <section id="repositorios" class="repositorios">
+      <h2>Repositórios (3)</h2>
+      <hr>
+      <div class="cardss">
+        <div class="row row-cols-1 row-cols-md-3 g-3">
           <div class="col">
-            <div class="card">
-              <img src="./assets/images/app_contatos_crud.png" class="card-img-top" alt="Cadastro de Contatos - CRUD">
+            <div class="card h-100">
+              <a href="repo.html" target="_blank"><img src="assets/img/logo_cade_meu_pet.jpg" class="card-img-top"
+                  alt="logo do site cadê meu pet?"></a>
               <div class="card-body">
-                <h5 class="card-title"><a href="./app_contatos" target="_blank">Cadastro de Contatos - CRUD</a></h5>
-                <p class="card-text">Funcionalidade de cadastro (CRUD) de contatos com possibilidade de inserção, exclusão, edição e visualização dos registros obtidos via JSONServer (contatos).</p>
+                <a href="repo.html" target="_blank">
+                  <h5 class="card-title">Cadê meu pet?</h5>
+                </a>
+                <p class="card-text">O "Cadê Meu Pet?" é uma plataforma online focada em auxiliar na busca por animais
+                  perdidos e na conexão de animais que precisam de adoção com novos lares.</p>
+                <div class="icones">
+                  <i class="fa-solid fa-heart"></i>
+                  <p>6</p>
+                  <i class="fa-solid fa-users"></i>
+                  <p>2</p>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img src="./assets/images/app_contatos_filter.png" class="card-img-top" alt="Cadastro de Contatos - Filtro/Pesquisa">
+            <div class="card h-100">
+              <a href="repo2.html" target="_blank"><img src="assets/img/imgagem_logo_gg.jpg" class="card-img-top"
+                  alt="logo do canal Gustavo Guanabara"></a>
               <div class="card-body">
-                <h5 class="card-title"><a href="./app_contatos/search.html" target="_blank">Cadastro de Contatos - Filtro/Pesquisa</a></h5>
-                <p class="card-text">Funcionalidade de filtro dos registros de contatos obtidos via JSONServer (contatos), utilizando as informações de cidade e categoria do contato.</p>
+                <a href="repo2.html" target="_blank">
+                  <h5 class="card-title">HTML-CSS</h5>
+                </a>
+                <p class="card-text">Desafios e exercícios resolvidos utilizados no curso "HTML e CSS" do canal no
+                  YouTube
+                  Curso em Vídeo, do Gustavo Guanabara.</p>
+                <div class="icones">
+                  <i class="fa-solid fa-heart"></i>
+                  <p>0</p>
+                  <i class="fa-solid fa-users"></i>
+                  <p>4</p>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img src="./assets/images/app_login.png" class="card-img-top" alt="Login do sistema">
+            <div class="card h-70">
+              <a href="repo3.html" target="_blank"><img src="assets/img/imagem_js.png" class="card-img-top"
+                  alt="logo do JavaScript"></a>
               <div class="card-body">
-                <h5 class="card-title"><a href="./app_login" target="_blank">Login do sistema</a></h5>
-                <p class="card-text">Funcionalidade de login e registro de usuários no sistema a partir de registros obtidos via JSONServer (usuarios). Permite o cadastro de novos usuários e as informações do usuário logado ficam registradas no sessionStorage até que o usuário efetue logoff.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="./assets/images/app_mapa.png" class="card-img-top" alt="Mapa com API Mapbox">
-              <div class="card-body">
-                <h5 class="card-title"><a href="./app_mapa" target="_blank">Mapas com API Mapbox</a></h5>
-                <p class="card-text">Funcionalidade de exibição de locais a partir de registros obtidos via JSONServer (locais). Utiliza a <a href="https://www.mapbox.com/">API Mapbox</a>. Você deve criar uma conta com o e-mail 999999@sga.pucminas.br para obter o acesso gratuito aos recursos da API.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="./assets/images/app_grafico.png" class="card-img-top" alt="Gráficos com o Chart.js">
-              <div class="card-body">
-                <h5 class="card-title"><a href="./app_graficos" target="_blank">Gráficos com o Chart.js</a></h5>
-                <p class="card-text">Funcionalidade de exibição de dados em gráficos a partir de registros obtidos via JSONServer (locais) e utilizando a biblioteca <a href="https://www.chartjs.org/">Chart.js</a>.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="./assets/images/app_cidades.png" class="card-img-top" alt="Passagem de parâmetros">
-              <div class="card-body">
-                <h5 class="card-title"><a href="./app_cidades" target="_blank">Passagem de parâmetros entre páginas</a></h5>
-                <p class="card-text">Funcionalidade para carga de dados via JSONServer (cidades) e passagem de parâmetros entre páginas da aplicação.</p>
+                <a href="repo3.html" target="_blank">
+                  <h5 class="card-title">JavaScript</h5>
+                </a>
+                <p class="card-text">Material complementar para estudos com a finalidade de aprender a linguagem de
+                  programação JavaScript.</p>
+                <div class="icones">
+                  <i class="fa-solid fa-heart"></i>
+                  <p>3</p>
+                  <i class="fa-solid fa-users"></i>
+                  <p>5</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+    </section>
 
-      <h2>Referências Bibliográficas</h2>
-      <ul>
-        <li>FLANAGAN, David. JavaScript : o guia definitivo. 6. ed. Porto Alegre, RS: Bookman, 2014. E-book (1062 p.) ISBN 9788565837484.</li>
-        <li>MILETTO, Evandro Manara. Desenvolvimento de software ii introdução ao desenvolvimento web com html, css, javascript e php. Porto Alegre Bookman 2014 1 recurso online ISBN 9788582601969.</li>
-        <li>SILVA, Maurício Samy. CSS3: desenvolva aplicações web profissionais com uso dos poderosos recursos de estilização das CSS3. São Paulo (SP): Novatec, c2012. 494 p. ISBN 9788575222898., Nº de Exemplares: 2.</li>
-      </ul>
-    </main>
-    <footer class="container">
-      Powered By <a href="https://webtech.network" target="_blank">WebTech PUC Minas</a>
-    </footer>
-  </div>
+    <section id="conteudo-sugerido" class="carrosel">
+      <h2>Conteúdo Sugerido</h2>
+      <hr>
+      <div class="imagens">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+              aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/imagem_cloud_tecnologia.jpg" class="d-block w-100"
+                alt="Fluxograma da tecnologia em nuvem">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/image_cloud_computing.webp" class="d-block w-100"
+                alt="Inforgrafico de cloud computing">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/imagem_tecnologia_mundo.jpg" class="d-block w-100"
+                alt="Tecnologia Quântica por volta do mundo">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/imagem_de_represetacao_tq.jpg" class="d-block w-100"
+                alt="Representação da tecnologia quântica">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/imagem_tecnologia_quantica.jpg" class="d-block w-100"
+                alt="Infografico da tecnologia em nuvem">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="colegas">
+      <h2>Colegas de Trabalho</h2>
+      <hr>
+      <div class="trabalho">
+        <div class="colega">
+          <img src="assets/img/foto_elektraawar.jpg" alt="imagem de perfil da Elektra Awar" width="120px"
+            height="120px">
+          <h3><a href="https://github.com/elektraelawar" target="_blank">Elektra Awar</a></h3>
+        </div>
+        <div class="colega">
+          <img src="assets/img/foto_joaogabriel.jpg" alt="imagem de perfil do João Gabriel" width="120px"
+            height="120px">
+          <h3><a href="https://github.com/joaogscc" target="_blank">João Gabriel</a></h3>
+        </div>
+        <div class="colega">
+          <img src="assets/img/foto_luisajardim.jpg" alt="imagem de perfil da Luisa Jardim" width="120px"
+            height="120px">
+          <h3><a href="https://github.com/luisajardim" target="_blank">Luisa Jardim</a></h3>
+        </div>
+        <div class="colega">
+          <img src="assets/img/foto_carlosjose.jpg" alt="imagem de perfil do Carlos José" width="120px" height="120px">
+          <h3><a href="https://github.com/dashboard" target="_blank">Carlos José</a></h3>
+        </div>
+        <div class="colega">
+          <img src="assets/img/foto_bernadoalvim.jpg" alt="imagem de perfil do Bernado Alvim" width="120px"
+            height="120px">
+          <h3><a href="https://github.com/alvimdev" target="_blank">Bernado Alvim</a></h3>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <hr>
+    <p> Copyright &copy; 2024 Marcos Alberto Ferreira Pinto inc. Todos os direitos reservados.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
