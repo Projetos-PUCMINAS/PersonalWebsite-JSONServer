@@ -27,6 +27,7 @@ async function main() {
       following: userData.following,
       public_repos: userData.public_repos,
       public_gists: userData.public_gists,
+      avatar_url: userData.avatar_url, 
     };
 
     // Converte o objeto para JSON
