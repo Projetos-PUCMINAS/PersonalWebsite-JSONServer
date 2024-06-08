@@ -6,63 +6,344 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/repo.css">
-    <title>Repositório: Cadê meu pet?</title>
+    <title>Repositório</title>
+    <style>
+        /* CSS padrão */
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        /* Resetando a página */
+        * {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 1em;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: #333;
+            font-family: var(--fonte-padrao);
+        }
+
+        /* Variaveis */
+        :root {
+            --cor0: #20d7d6;
+            --cor1: #3f949c;
+            --cor2: white;
+            --cor3: #9e978d;
+            --cor4: #2e3132;
+            --fonte-padrao: 'Inter', sans-serif;
+        }
+
+        /* Header */
+        .cabecalho {
+            color: var(--cor2);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: var(--cor2);
+            text-decoration: none;
+            border: 2px solid var(--cor0);
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 40px;
+            white-space: nowrap;
+        }
+
+        .logo:hover,
+        .logo:active {
+            color: var(--cor1);
+        }
+
+        .menu {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .cabecalho .menu li {
+            margin-left: 20px;
+            margin-right: 40px;
+            font-size: 27px;
+        }
+
+        .cabecalho .menu li a:hover {
+            color: var(--cor0);
+        }
+
+        .cabecalho .menu li a {
+            color: var(--cor2);
+            text-decoration: none;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: var(--cor2);
+            text-decoration: none;
+            vertical-align: middle;
+        }
+
+        /* Main */
+        .main h2 {
+            margin-top: 30px;
+            margin-left: 60px;
+            color: var(--cor2);
+        }
+
+        .main hr {
+            margin-left: 60px;
+            color: var(--cor0);
+            margin-right: 60px;
+        }
+
+        .descricao h3 {
+            color: var(--cor0);
+            margin-left: 60px;
+            font-size: 20px;
+        }
+
+        .descricao p {
+            margin-left: 60px;
+            margin-right: 60px;
+            color: var(--cor2);
+            margin-bottom: 30px;
+        }
+
+        .detalhes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .detalhe h3 {
+            color: var(--cor0);
+            margin-left: 60px;
+            font-size: 20px;
+        }
+
+        .detalhe h3~p {
+            color: var(--cor2);
+            margin-left: 60px;
+        }
+
+        .icones {
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 60px;
+            font-size: 20px;
+        }
+
+        .coracao i,
+        .compartilhados i {
+            margin-right: 20px;
+        }
+
+        .coracao i {
+            color: rgba(201, 3, 3, 0.753);
+        }
+
+        .compartilhados i {
+            color: rgba(8, 79, 160, 0.801);
+        }
+
+        .coracao i~p,
+        .compartilhados i~p {
+            color: var(--cor2);
+        }
+
+        .linguagem h3 {
+            color: var(--cor0);
+            margin-left: 60px;
+            font-size: 20px;
+        }
+
+        .linguagem p {
+            color: var(--cor2);
+            margin-left: 60px;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .acesso a {
+            margin-left: 60px;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .acesso h3 {
+            color: var(--cor0);
+            margin-left: 60px;
+            font-size: 20px;
+        }
+
+        .topicos {
+            list-style: none;
+        }
+
+        .topicos h3 {
+            color: var(--cor0);
+            margin-left: 60px;
+            font-size: 20px;
+        }
+
+        .topicos li {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 10px;
+            background-color: var(--cor2);
+            border-radius: 5px;
+        }
+
+        .li {
+            margin-left: 30px;
+        }
+
+        /* Footer */
+        .rodape p {
+            text-align: center;
+            color: var(--cor2);
+        }
+
+        .rodape hr {
+            margin-left: 20px;
+            color: var(--cor0);
+            margin-right: 20px;
+        }
+
+        /* Mídia para dispositivos móveis */
+        @media screen and (max-width: 768px) {
+
+            /*header*/
+            .cabecalho {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+            .menu {
+                list-style-type: none;
+                margin-top: 10px;
+            }
+
+            .menu li {
+                display: block;
+                margin-left: 0;
+            }
+
+            .menu li a {
+                display: block;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .menu li a:hover {
+                color: var(--cor0);
+            }
+
+            .cabecalho .menu li {
+                font-size: 20px;
+            }
+
+            .main h2,
+            .main hr,
+            .descricao h3,
+            .descricao p,
+            .detalhes,
+            .detalhe h3,
+            .detalhe h3~p,
+            .icones,
+            .coracao i,
+            .compartilhados i,
+            .coracao i~p,
+            .compartilhados i~p,
+            .linguagem h3,
+            .linguagem p,
+            .acesso p,
+            .acesso h3,
+            .topicos h3 {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .logo {
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+            .topicos li {
+                margin-left: 30px;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header class="cabecalho">
-        <h1><a href="index.html" target="_blank" class="logo">Marcos Alberto</a></h1>
+        <h1><a href="../public/index.html" target="_blank" class="logo">Marcos Alberto</a></h1>
         <nav class="menu">
             <ul>
                 <li><a href="https://github.com/marcosffp" target="_blank">GitHub</a></li>
-                <li><a href="https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet" target="_blank">Repositório</a></li>
-                <li><a href="https://www.linkedin.com/in/marcos-alberto-4502a6304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedn</a></li>
+                <a id="repoHtmlUrl" href="" target="_blank">Repositório</a>
+                <li><a href="https://www.linkedin.com/in/marcos-alberto-4502a6304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank">Linkedn</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main">
-        <h2>Repositório: Cadê meu pet?</h2>
+        <h2 id="repoName">Repositório: Cadê meu pet?</h2>
         <hr>
         <div class="descricao">
             <h3>Descrição</h3>
-            <p>O "Cadê Meu Pet?" é uma plataforma online dedicada a oferecer suporte na localização de animais perdidos
-                e na facilitação de adoções responsáveis. Nosso objetivo é conectar animais que precisam de um lar
-                amoroso com pessoas dispostas a oferecer todo o cuidado e carinho necessários. Com uma abordagem
-                centrada nos animais, buscamos promover o reencontro de pets perdidos com seus tutores e proporcionar
-                uma nova chance de vida para aqueles que estão em busca de um lar definitivo.</p>
+            <p id="repoDescription">Descrição do repositório</p>
         </div>
 
         <div class="detalhes">
             <div class="detalhe">
                 <h3>Data de Criação</h3>
-                <p>2024-03-20</p>
+                <p id="repoCreatedAt">Data de criação do repositório</p>
             </div>
 
             <div class="icones">
                 <div class="coracao">
                     <i class="fa-solid fa-heart fa-2x"></i>
-                    <p>9</p>
+                    <p id="stargazersCount">Número de estrelas</p>
                 </div>
 
                 <div class="compartilhados">
                     <i class="fa-solid fa-users fa-2x"></i>
-                    <p>2</p>
+                    <p id="watchersCount">Número de observadores</p>
                 </div>
             </div>
         </div>
 
         <div class="linguagem">
             <h3>Linguagens de marcação, de estilo e de programação</h3>
-            <p>HTML, CSS e JavaScript</p>
+            <p id="repoLanguages">Linguagens usadas no repositório</p>
         </div>
 
         <div class="acesso">
             <h3>Link de Acesso</h3>
-            <p><a href="https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet"
-                    target="_blank">https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385200-cade-meu-pet</a>
-            </p>
+            <a id="repoHtmlUrl" href="" target="_blank">Repositório</a>
         </div>
 
         <div class="topicos">
@@ -83,6 +364,31 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Função para obter parâmetros de consulta da URL
+        function getQueryParams() {
+            const queryParams = {};
+            window.location.search.replace(/^\?/, '').split('&').forEach(pair => {
+                const [key, value] = pair.split('=');
+                queryParams[key] = decodeURIComponent(value);
+            });
+            return queryParams;
+        }
+
+        // Função para preencher os elementos da página com os dados do repositório
+        function fillRepoDetails() {
+            const queryParams = getQueryParams();
+            document.getElementById('repoHtmlUrl').innerHTML = `<a href="${queryParams.html_url}" target="_blank">${queryParams.html_url}</a>`;
+            document.getElementById('repoName').textContent = queryParams.name || 'Nome do Repositório';
+            document.getElementById('repoDescription').textContent = queryParams.description || 'Descrição do repositório';
+            document.getElementById('repoCreatedAt').textContent = queryParams.createdAt || 'Data de criação do repositório';
+            document.getElementById('stargazersCount').textContent = queryParams.stargazers_count || 'Número de estrelas';
+            document.getElementById('watchersCount').textContent = queryParams.watchers_count || 'Número de observadores';
+            document.getElementById('repoLanguages').textContent = queryParams.language || 'Linguagens usadas no repositório';
+        }
+
+        fillRepoDetails();
+    </script>
 </body>
 
 </html>
