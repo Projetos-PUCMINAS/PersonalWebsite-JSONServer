@@ -1,12 +1,81 @@
 {
-  "id": 159904717,
-  "login": "marcosffp",
-  "name": "marcosalberto",
-  "bio": "Estudante de Engenharia de Software na PUCMINAS, interessado em tecnologia, com habilidades em HTML, CSS, JS, C e C++. Experiência em atividades extracurricular",
-  "location": "Santa Luzia, MG, Brasil",
-  "followers": 2,
-  "following": 0,
-  "public_repos": 2,
-  "public_gists": 0,
-  "avatar_url": "https://avatars.githubusercontent.com/u/159904717?v=4"
+  "usuario": {
+    "id": 159904717,
+    "login": "marcosffp",
+    "name": "marcosalberto",
+    "bio": "Estudante de Engenharia de Software na PUCMINAS, interessado em tecnologia, com habilidades em HTML, CSS, JS, C e C++. Experiência em atividades extracurricular",
+    "location": "Santa Luzia, MG, Brasil",
+    "followers": 2,
+    "following": 1,
+    "public_repos": 5,
+    "public_gists": 0,
+    "avatar_url": "https://avatars.githubusercontent.com/u/159904717?v=4"
+  },
+  "repositorios": [
+    {
+      "id": 812407144,
+      "name": "cade_meu_pet",
+      "full_name": "marcosffp/cade_meu_pet",
+      "description": "plf-es-2024-1-ti1-0385200-cade-meu-pet created by GitHub Classroom",
+      "html_url": "https://github.com/marcosffp/cade_meu_pet",
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "forks_count": 0,
+      "open_issues_count": 0,
+      "created_at": "2024-06-08T19:57:41Z"
+    },
+    {
+      "id": 777333649,
+      "name": "html-css",
+      "full_name": "marcosffp/html-css",
+      "description": "Desafios e exercícios resolvidos utilizados no curso \"HTML e CSS\" do canal no YouTube Curso em Vídeo, do Gustavo Guanabara.",
+      "html_url": "https://github.com/marcosffp/html-css",
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "forks_count": 0,
+      "open_issues_count": 0,
+      "created_at": "2024-03-25T16:49:38Z"
+    },
+    {
+      "id": 777366775,
+      "name": "javascript",
+      "full_name": "marcosffp/javascript",
+      "description": "Material complementar para estudos com a finalidade de aprender a linguagem de programação JavaScript.",
+      "html_url": "https://github.com/marcosffp/javascript",
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": null,
+      "forks_count": 0,
+      "open_issues_count": 0,
+      "created_at": "2024-03-25T18:06:18Z"
+    },
+    {
+      "id": 785830882,
+      "name": "personal-website",
+      "full_name": "marcosffp/personal-website",
+      "description": null,
+      "html_url": "https://github.com/marcosffp/personal-website",
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "forks_count": 0,
+      "open_issues_count": 0,
+      "created_at": "2024-04-12T18:02:47Z"
+    },
+    {
+      "id": 811381148,
+      "name": "PersonalWebsite-JSONServer",
+      "full_name": "marcosffp/PersonalWebsite-JSONServer",
+      "description": null,
+      "html_url": "https://github.com/marcosffp/PersonalWebsite-JSONServer",
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "HTML",
+      "forks_count": 0,
+      "open_issues_count": 0,
+      "created_at": "2024-06-06T13:40:47Z"
+    }
+  ]
 }

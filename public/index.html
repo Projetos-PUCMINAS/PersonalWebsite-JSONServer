@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Site pessoal</title>
 </head>
@@ -27,28 +27,23 @@
       <h2>Perfil</h2>
       <hr>
       <div class="imagem-texto">
-        <img src="assets/img/foto_de_perfil.jpg" alt="imagem de perfil" width="160px" height="160px">
-        <div class="texto">
-          <h3>Marcos Alberto Ferreira Pinto</h3>
-          <p>Estudante do curso de Engenharia de Software, gosto de tecnologia e de inovação. Habilidades iniciais em
-            HTML e CSS e linguagem C, desenvolvimento de software e algoritmos. Experiência em atividades
-            extracurriculares.
-            Busca constante por aprendizado e aperfeiçoamento, capaz de solucionar desafios do mundo real.</p>
+        <img id="imagem-perfil" alt="imagem de perfil" width="160px" height="160px">
+        <div class="texto" id="texto-perfil">
+          <h3></h3>
+          <p></p>
           <div class="icone">
             <div class="tex">
-            <p><strong>Localização:</strong> Santa Luzia, MG, Brasil</p>
-            <p><strong>E-mail:</strong> marcosferralbe@gmail.com</p>
+              <p><strong>Localização:</strong> <span id="localizacao"></span></p>
+              <p><strong>E-mail:</strong> marcosferralbe@gmai.com<span id="email"></span></p>
             </div>
             <div class="comp"><i class="fa-solid fa-users fa-2x"></i>
-              <p>30</p>
+              <p id="seguidores"></p>
             </div>
           </div>
           <div class="redes-sociais">
-            <a href="https://www.tiktok.com/@marcos_alber?_t=8lUp9ud8zXZ&_r=1" target="_blank"><i
-                class="fa-brands fa-tiktok"></i></a>
-            <a href="https://www.twitch.tv/marcos_fkp" target="_blank"><i class="fa-brands fa-twitch"></i></a>
-            <a href="https://www.instagram.com/marcos.fkp?igsh=MW44MmpucDBvMzd0cA==" target="_blank"><i
-                class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/japa_fkp?t=jMIFgGdjdxi-BurS-v8P9A&s=09" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="https://www.instagram.com/marcos.fkp?igsh=MW44MmpucDBvMzd0cA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/marcos-alberto-4502a6304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
       </div>
@@ -82,8 +77,7 @@
           </div>
           <div class="col">
             <div class="card h-100">
-              <a href="repo2.html" target="_blank"><img src="assets/img/imgagem_logo_gg.jpg" class="card-img-top"
-                  alt="logo do canal Gustavo Guanabara"></a>
+              <a href="repo2.html" target="_blank"></a>
               <div class="card-body">
                 <a href="repo2.html" target="_blank">
                   <h5 class="card-title">HTML-CSS</h5>
@@ -213,6 +207,7 @@
     <p> Copyright &copy; 2024 Marcos Alberto Ferreira Pinto inc. Todos os direitos reservados.</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../public/assets/scripts/app.js"></script>
 </body>
 
 </html>
