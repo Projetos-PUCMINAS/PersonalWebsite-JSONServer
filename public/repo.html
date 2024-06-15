@@ -8,11 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Repositório</title>
     <style>
-        /* CSS padrão */
-
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-        /* Resetando a página */
         * {
             padding: 0;
             margin: 0;
@@ -31,7 +28,6 @@
             font-family: var(--fonte-padrao);
         }
 
-        /* Variaveis */
         :root {
             --cor0: #20d7d6;
             --cor1: #3f949c;
@@ -41,7 +37,6 @@
             --fonte-padrao: 'Inter', sans-serif;
         }
 
-        /* Header */
         .cabecalho {
             color: var(--cor2);
             padding: 20px;
@@ -96,7 +91,6 @@
             vertical-align: middle;
         }
 
-        /* Main */
         .main h2 {
             margin-top: 30px;
             margin-left: 60px;
@@ -211,7 +205,6 @@
             margin-left: 30px;
         }
 
-        /* Footer */
         .rodape p {
             text-align: center;
             color: var(--cor2);
@@ -223,10 +216,7 @@
             margin-right: 20px;
         }
 
-        /* Mídia para dispositivos móveis */
         @media screen and (max-width: 768px) {
-
-            /*header*/
             .cabecalho {
                 flex-direction: column;
                 align-items: center;
@@ -349,7 +339,7 @@
         <div class="topicos">
             <h3>Tópicos</h3>
             <ul>
-                <!-- Lista de tópicos será preenchida dinamicamente aqui -->
+
             </ul>
         </div>
     </main>
@@ -361,7 +351,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Função para obter parâmetros de consulta da URL
         function getQueryParams() {
             const queryParams = {};
             window.location.search.replace(/^\?/, '').split('&').forEach(pair => {
@@ -371,34 +360,35 @@
             return queryParams;
         }
 
-        // Função para preencher os elementos da página com os dados do repositório
         function fillRepoDetails() {
             const queryParams = getQueryParams();
-            document.getElementById('repoHtmlUrl').href = queryParams.html_url || "#"
-            document.getElementById('repoHtmlUrl').innerText = "repositorio";
+            document.getElementById('repoHtmlUrl').href = queryParams.html_url || "#";
+            document.getElementById('repoHtmlUrl').innerText = "Repositório";
             document.getElementById('repoName').textContent = queryParams.name || 'Nome do Repositório';
             document.getElementById('repoDescription').textContent = queryParams.description || 'Descrição do repositório';
             document.getElementById('repoCreatedAt').innerText = queryParams.created_at || 'Data de criação do repositório';
             document.getElementById('stargazersCount').textContent = queryParams.stargazers_count || 'Número de estrelas';
             document.getElementById('watchersCount').textContent = queryParams.watchers_count || 'Número de observadores';
-            document.getElementById('repoLanguages').textContent = queryParams.language || 'Linguagem não informado';
-            const topicosUl = document.querySelector('.topicos ul');
-            topicosUl.innerHTML = ''; // Limpa qualquer conteúdo pré-existente
+            document.getElementById('repoLanguages').textContent = queryParams.language || 'Linguagem não informada';
 
-            if (queryParams.topics && queryParams.topics.length > 0) {
-                queryParams.topics.forEach(topic => {
+            const topicosUl = document.querySelector('.topicos ul');
+            topicosUl.innerHTML = '';
+
+            if (typeof queryParams.topicos !== 'undefined' && queryParams.topicos !== '') {
+                const topicosArray = queryParams.topicos.split(',');
+                topicosArray.forEach(topic => {
                     const li = document.createElement('li');
                     li.textContent = topic;
                     topicosUl.appendChild(li);
                 });
+            } else {
+                const li = document.createElement('li');
+                li.textContent = 'Tópicos não informados';
+                topicosUl.appendChild(li);
             }
-            else {
-                topicosUl.appendChild('<li>Tópicos não informados</li>');
-            }
-
         }
 
-        fillRepoDetails();
+        document.addEventListener('DOMContentLoaded', fillRepoDetails);
     </script>
 </body>
 

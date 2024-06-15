@@ -1,36 +1,57 @@
 const axios = require('axios');
 const fs = require('fs');
 
-// Função para obter dados do usuário do GitHub
 async function getdadosusuario(nomeusuario) {
   try {
-    const response = await axios.get(`https://api.github.com/users/marcosffp`);
+    const response = await axios.get(`https://api.github.com/users/${nomeusuario}`);
     return response.data;
   } catch (error) {
-    console.error('Erro ao obter dados do usuário:', error);
+    console.error(`Erro ao obter dados do usuário ${nomeusuario}:`, error);
     return null;
   }
 }
 
-// Função para obter dados dos repositórios do usuário do GitHub
 async function getRepositoriosUsuario(nomeusuario) {
   try {
-    const response = await axios.get(`https://api.github.com/users/marcosffp/repos`);
+    const response = await axios.get(`https://api.github.com/users/${nomeusuario}/repos`);
     return response.data;
   } catch (error) {
-    console.error('Erro ao obter dados dos repositórios:', error);
+    console.error(`Erro ao obter dados dos repositórios do usuário ${nomeusuario}:`, error);
     return null;
   }
 }
 
-// Função para salvar dados do usuário e dos repositórios em um único arquivo JSON
+async function getDadosColaboradores(usernames) {
+  const colaboradores = [];
+
+  for (const username of usernames) {
+    const dadosUsuario = await getdadosusuario(username);
+    if (dadosUsuario) {
+      const colaborador = {
+        id: dadosUsuario.id,
+        name: dadosUsuario.name,
+        avatar_url: dadosUsuario.avatar_url
+      };
+      colaboradores.push(colaborador);
+    }
+  }
+
+  return colaboradores;
+}
+
 async function salvarDados() {
-  const nomeusuario = 'marcosffp'; // Define o nome do usuário do GitHub que você deseja obter
+  const nomeusuario = 'marcosffp';
   const dadosusuario = await getdadosusuario(nomeusuario);
   const dadosRepositorios = await getRepositoriosUsuario(nomeusuario);
+  const colaboradores = await getDadosColaboradores([
+    'alvimdev',
+    'joaogscc',
+    'gabialvarenga',
+    'luisajardim',
+    'CarlosJFigueiredo'
+  ]);
 
-  if (dadosusuario && dadosRepositorios) {
-    // Cria um objeto para armazenar os dados do usuário
+  if (dadosusuario && dadosRepositorios && colaboradores) {
     const githubUser = {
       id: dadosusuario.id,
       login: dadosusuario.login,
@@ -41,10 +62,9 @@ async function salvarDados() {
       following: dadosusuario.following,
       public_repos: dadosusuario.public_repos,
       public_gists: dadosusuario.public_gists,
-      avatar_url: dadosusuario.avatar_url,
+      avatar_url: dadosusuario.avatar_url
     };
 
-    // Cria um array para armazenar os dados dos repositórios
     const repositoriosArray = dadosRepositorios.map(repo => ({
       id: repo.id,
       name: repo.name,
@@ -57,24 +77,43 @@ async function salvarDados() {
       forks_count: repo.forks_count,
       open_issues_count: repo.open_issues_count,
       created_at: repo.created_at,
-      topics: repo.topics,
+      topics: repo.topics
     }));
 
-    // Cria um objeto final para armazenar os dados do usuário e dos repositórios
+    const carrossel = [
+      {
+        src: "../public/assets/img/imagem_cloud_tecnologia.jpg",
+        alt: "Fluxograma da tecnologia em nuvem"
+      },
+      {
+        src: "../public/assets/img/image_cloud_computing.webp",
+        alt: "Inforgrafico de cloud computing"
+      },
+      {
+        src: "../public/assets/img/imagem_tecnologia_mundo.jpg",
+        alt: "Tecnologia Quântica por volta do mundo"
+      },
+      {
+        src: "../public/assets/img/imagem_de_represetacao_tq.jpg",
+        alt: "Representação da tecnologia quântica"
+      },
+      {
+        src: "../public/assets/img/imagem_tecnologia_quantica.jpg",
+        alt: "Infografico da tecnologia em nuvem"
+      }
+    ];
+
     const dadosFinais = {
       usuario: githubUser,
       repositorios: repositoriosArray,
+      colaboradores: colaboradores,
+      carrossel: carrossel
     };
 
-    // Converte o objeto final para JSON
-    const json = JSON.stringify(dadosFinais, null, 2);
-
-    // Cria um arquivo JSON e escreve os dados nele
-    fs.writeFileSync('./db/db.json', json);
-
-    console.log('Dados do GitHub adicionados ao arquivo dados_github.json com sucesso!');
+    fs.writeFileSync('./db/db.json', JSON.stringify(dadosFinais, null, 2));
+    console.log('Dados do GitHub adicionados ao arquivo db.json com sucesso!');
   } else {
-    console.log('Erro ao obter dados do usuário ou dos repositórios no GitHub');
+    console.log('Erro ao obter dados do usuário, dos repositórios ou dos colaboradores no GitHub');
   }
 }
 

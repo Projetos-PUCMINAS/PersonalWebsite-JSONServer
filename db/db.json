@@ -6,7 +6,7 @@
     "bio": "Estudante de Engenharia de Software na PUCMINAS, interessado em tecnologia, com habilidades em HTML, CSS, JS, C e C++. Experiência em atividades extracurricular",
     "location": "Santa Luzia, MG, Brasil",
     "followers": 4,
-    "following": 4,
+    "following": 5,
     "public_repos": 6,
     "public_gists": 0,
     "avatar_url": "https://avatars.githubusercontent.com/u/159904717?v=4"
@@ -95,6 +95,55 @@
       "open_issues_count": 0,
       "created_at": "2024-06-06T13:40:47Z",
       "topics": []
+    }
+  ],
+  "colaboradores": [
+    {
+      "id": 83983141,
+      "name": "Bernardo Alvim",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83983141?v=4"
+    },
+    {
+      "id": 164203417,
+      "name": "João Gabriel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/164203417?v=4"
+    },
+    {
+      "id": 160603188,
+      "name": "Gabriela Alvarenga",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160603188?v=4"
+    },
+    {
+      "id": 164196658,
+      "name": "Luísa Jardim ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/164196658?v=4"
+    },
+    {
+      "id": 160924066,
+      "name": null,
+      "avatar_url": "https://avatars.githubusercontent.com/u/160924066?v=4"
+    }
+  ],
+  "carrossel": [
+    {
+      "src": "../public/assets/img/imagem_cloud_tecnologia.jpg",
+      "alt": "Fluxograma da tecnologia em nuvem"
+    },
+    {
+      "src": "../public/assets/img/image_cloud_computing.webp",
+      "alt": "Inforgrafico de cloud computing"
+    },
+    {
+      "src": "../public/assets/img/imagem_tecnologia_mundo.jpg",
+      "alt": "Tecnologia Quântica por volta do mundo"
+    },
+    {
+      "src": "../public/assets/img/imagem_de_represetacao_tq.jpg",
+      "alt": "Representação da tecnologia quântica"
+    },
+    {
+      "src": "../public/assets/img/imagem_tecnologia_quantica.jpg",
+      "alt": "Infografico da tecnologia em nuvem"
     }
   ]
 }
