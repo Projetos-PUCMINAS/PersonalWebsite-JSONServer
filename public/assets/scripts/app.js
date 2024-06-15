@@ -31,9 +31,7 @@ async function fetchData() {
       card.innerHTML = `
         <div class="card h-100" onclick="fetchRepoDetails(${repo.id})"> 
           <div class="card-body">
-            <a href="${repo.html_url}" target="_blank">
               <h5 class="card-title">${repo.name}</h5>
-            </a>
             <p class="card-text">${repo.description || 'Sem descrição'}</p>
             <div class="icones">
               <i class="fa-solid fa-heart"></i>
@@ -62,7 +60,7 @@ async function fetchRepoDetails(repoId) {
     const repositorio = data.repositorios.find(repo => repo.id === repoId);
 
     // Redireciona para a página repo.html com os detalhes do repositório como parâmetros de consulta
-    window.location.href = `repo.html?id=${repositorio.id}&name=${repositorio.name}&description=${encodeURIComponent(repositorio.description || '')}&html_url=${repositorio.html_url}&stargazers_count=${repositorio.stargazers_count}&watchers_count=${repositorio.watchers_count}`;
+    window.location.href = `repo.html?id=${repositorio.id}&name=${repositorio.name}&description=${encodeURIComponent(repositorio.description || '')}&html_url=${repositorio.html_url}&stargazers_count=${repositorio.stargazers_count}&watchers_count=${repositorio.watchers_count}&created_at=${repositorio.created_at}&topicos=${repositorio.topicos}`;
   } catch (error) {
     console.error('Erro ao carregar dados do repositório:', error);
   }

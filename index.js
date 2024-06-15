@@ -57,6 +57,7 @@ async function salvarDados() {
       forks_count: repo.forks_count,
       open_issues_count: repo.open_issues_count,
       created_at: repo.created_at,
+      topics: repo.topics,
     }));
 
     // Cria um objeto final para armazenar os dados do usuário e dos repositórios

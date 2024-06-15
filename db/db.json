@@ -5,9 +5,9 @@
     "name": "marcosalberto",
     "bio": "Estudante de Engenharia de Software na PUCMINAS, interessado em tecnologia, com habilidades em HTML, CSS, JS, C e C++. Experiência em atividades extracurricular",
     "location": "Santa Luzia, MG, Brasil",
-    "followers": 2,
-    "following": 1,
-    "public_repos": 5,
+    "followers": 4,
+    "following": 4,
+    "public_repos": 6,
     "public_gists": 0,
     "avatar_url": "https://avatars.githubusercontent.com/u/159904717?v=4"
   },
@@ -23,7 +23,22 @@
       "language": null,
       "forks_count": 0,
       "open_issues_count": 0,
-      "created_at": "2024-06-08T19:57:41Z"
+      "created_at": "2024-06-08T19:57:41Z",
+      "topics": []
+    },
+    {
+      "id": 815353011,
+      "name": "Hotel-Descanso-Garantido",
+      "full_name": "marcosffp/Hotel-Descanso-Garantido",
+      "description": "Este repositório contém o projeto da disciplina de Fundamentos de Engenharia de Software e Algoritmos e Estruturas de Dados I da PUC Minas. O projeto visa criar um sistema de gerenciamento para o Hotel Descanso Garantido em Itacaré – BA, substituindo métodos manuais por uma solução automatizada para controle de estadias, clientes e funcionários.",
+      "html_url": "https://github.com/marcosffp/Hotel-Descanso-Garantido",
+      "stargazers_count": 0,
+      "watchers_count": 0,
+      "language": "C",
+      "forks_count": 0,
+      "open_issues_count": 0,
+      "created_at": "2024-06-14T23:36:19Z",
+      "topics": []
     },
     {
       "id": 777333649,
@@ -36,7 +51,8 @@
       "language": "HTML",
       "forks_count": 0,
       "open_issues_count": 0,
-      "created_at": "2024-03-25T16:49:38Z"
+      "created_at": "2024-03-25T16:49:38Z",
+      "topics": []
     },
     {
       "id": 777366775,
@@ -49,7 +65,8 @@
       "language": null,
       "forks_count": 0,
       "open_issues_count": 0,
-      "created_at": "2024-03-25T18:06:18Z"
+      "created_at": "2024-03-25T18:06:18Z",
+      "topics": []
     },
     {
       "id": 785830882,
@@ -62,7 +79,8 @@
       "language": "HTML",
       "forks_count": 0,
       "open_issues_count": 0,
-      "created_at": "2024-04-12T18:02:47Z"
+      "created_at": "2024-04-12T18:02:47Z",
+      "topics": []
     },
     {
       "id": 811381148,
@@ -75,7 +93,8 @@
       "language": "HTML",
       "forks_count": 0,
       "open_issues_count": 0,
-      "created_at": "2024-06-06T13:40:47Z"
+      "created_at": "2024-06-06T13:40:47Z",
+      "topics": []
     }
   ]
 }

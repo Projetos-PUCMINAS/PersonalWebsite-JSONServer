@@ -302,7 +302,7 @@
         <nav class="menu">
             <ul>
                 <li><a href="https://github.com/marcosffp" target="_blank">GitHub</a></li>
-                <a id="repoHtmlUrl" href="" target="_blank">Repositório</a>
+                <li><a id="repoHtmlUrl" href="" target="_blank">Repositório</a></li>
                 <li><a href="https://www.linkedin.com/in/marcos-alberto-4502a6304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                         target="_blank">Linkedn</a></li>
             </ul>
@@ -343,17 +343,13 @@
 
         <div class="acesso">
             <h3>Link de Acesso</h3>
-            <a id="repoHtmlUrl" href="" target="_blank">Repositório</a>
+            <a id="repoHtmlUrl" href="" target="_blank">Link do Repositório</a>
         </div>
 
         <div class="topicos">
             <h3>Tópicos</h3>
             <ul>
-                <li class="li">Html/Css/Js</li>
-                <li>DevOps</li>
-                <li>FrontEnd</li>
-                <li>TIAW</li>
-                <li>Documentação</li>
+                <!-- Lista de tópicos será preenchida dinamicamente aqui -->
             </ul>
         </div>
     </main>
@@ -378,13 +374,28 @@
         // Função para preencher os elementos da página com os dados do repositório
         function fillRepoDetails() {
             const queryParams = getQueryParams();
-            document.getElementById('repoHtmlUrl').innerHTML = `<a href="${queryParams.html_url}" target="_blank">${queryParams.html_url}</a>`;
+            document.getElementById('repoHtmlUrl').href = queryParams.html_url || "#"
+            document.getElementById('repoHtmlUrl').innerText = "repositorio";
             document.getElementById('repoName').textContent = queryParams.name || 'Nome do Repositório';
             document.getElementById('repoDescription').textContent = queryParams.description || 'Descrição do repositório';
-            document.getElementById('repoCreatedAt').textContent = queryParams.createdAt || 'Data de criação do repositório';
+            document.getElementById('repoCreatedAt').innerText = queryParams.created_at || 'Data de criação do repositório';
             document.getElementById('stargazersCount').textContent = queryParams.stargazers_count || 'Número de estrelas';
             document.getElementById('watchersCount').textContent = queryParams.watchers_count || 'Número de observadores';
-            document.getElementById('repoLanguages').textContent = queryParams.language || 'Linguagens usadas no repositório';
+            document.getElementById('repoLanguages').textContent = queryParams.language || 'Linguagem não informado';
+            const topicosUl = document.querySelector('.topicos ul');
+            topicosUl.innerHTML = ''; // Limpa qualquer conteúdo pré-existente
+
+            if (queryParams.topics && queryParams.topics.length > 0) {
+                queryParams.topics.forEach(topic => {
+                    const li = document.createElement('li');
+                    li.textContent = topic;
+                    topicosUl.appendChild(li);
+                });
+            }
+            else {
+                topicosUl.appendChild('<li>Tópicos não informados</li>');
+            }
+
         }
 
         fillRepoDetails();
