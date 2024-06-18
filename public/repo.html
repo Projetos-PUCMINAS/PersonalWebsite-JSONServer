@@ -374,7 +374,7 @@
             const topicosUl = document.querySelector('.topicos ul');
             topicosUl.innerHTML = '';
 
-            if (typeof queryParams.topicos !== 'undefined' && queryParams.topicos !== '') {
+            if (!queryParams.topicos || queryParams.topicos.length <= 0) {
                 const topicosArray = queryParams.topicos.split(',');
                 topicosArray.forEach(topic => {
                     const li = document.createElement('li');

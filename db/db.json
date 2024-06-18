@@ -32,10 +32,10 @@
       "full_name": "marcosffp/Hotel-Descanso-Garantido",
       "description": "Este repositório contém o projeto da disciplina de Fundamentos de Engenharia de Software e Algoritmos e Estruturas de Dados I da PUC Minas. O projeto visa criar um sistema de gerenciamento para o Hotel Descanso Garantido em Itacaré – BA, substituindo métodos manuais por uma solução automatizada para controle de estadias, clientes e funcionários.",
       "html_url": "https://github.com/marcosffp/Hotel-Descanso-Garantido",
-      "stargazers_count": 0,
-      "watchers_count": 0,
+      "stargazers_count": 1,
+      "watchers_count": 1,
       "language": "C",
-      "forks_count": 0,
+      "forks_count": 1,
       "open_issues_count": 0,
       "created_at": "2024-06-14T23:36:19Z",
       "topics": []
@@ -120,7 +120,7 @@
     },
     {
       "id": 160924066,
-      "name": null,
+      "name": "Carlos Figueiredo",
       "avatar_url": "https://avatars.githubusercontent.com/u/160924066?v=4"
     }
   ],
