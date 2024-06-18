@@ -116,5 +116,4 @@ async function salvarDados() {
     console.log('Erro ao obter dados do usuário, dos repositórios ou dos colaboradores no GitHub');
   }
 }
-
 salvarDados();
