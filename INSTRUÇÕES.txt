@@ -1,0 +1,9 @@
+Claro! Aqui estão as instruções diretas:
+
+    Abra o Visual Studio Code.
+
+    No terminal do VS Code, digite npm start e pressione Enter.
+
+    Após o projeto ter sido inicializado com sucesso, clique na extensão "Live Server" localizada na barra lateral esquerda do VS Code.
+    
+    Espere até que o Live Server inicie e abra automaticamente o seu projeto no navegador padrão.

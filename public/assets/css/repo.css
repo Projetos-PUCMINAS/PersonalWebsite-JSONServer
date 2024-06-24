@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1em;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #333;
+    font-family: var(--fonte-padrao);
+}
+
+:root {
+    --cor0: #20d7d6;
+    --cor1: #3f949c;
+    --cor2: white;
+    --cor3: #9e978d;
+    --cor4: #2e3132;
+    --fonte-padrao: 'Inter', sans-serif;
+}
+
+.cabecalho {
+    color: var(--cor2);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--cor2);
+    text-decoration: none;
+    border: 2px solid var(--cor0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 40px;
+    white-space: nowrap;
+}
+
+.logo:hover,
+.logo:active {
+    color: var(--cor1);
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho .menu li {
+    margin-left: 20px;
+    margin-right: 40px;
+    font-size: 27px;
+}
+
+.cabecalho .menu li a:hover {
+    color: var(--cor0);
+}
+
+.cabecalho .menu li a {
+    color: var(--cor2);
+    text-decoration: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.menu li a {
+    color: var(--cor2);
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.main h2 {
+    margin-top: 30px;
+    margin-left: 60px;
+    color: var(--cor2);
+}
+
+.main hr {
+    margin-left: 60px;
+    color: var(--cor0);
+    margin-right: 60px;
+}
+
+.descricao h3 {
+    color: var(--cor0);
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+.descricao p {
+    margin-left: 60px;
+    margin-right: 60px;
+    color: var(--cor2);
+    margin-bottom: 30px;
+}
+
+.detalhes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.detalhe h3 {
+    color: var(--cor0);
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+.detalhe h3~p {
+    color: var(--cor2);
+    margin-left: 60px;
+}
+
+.icones {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    font-size: 20px;
+}
+
+.coracao i,
+.compartilhados i {
+    margin-right: 20px;
+}
+
+.coracao i {
+    color: rgba(201, 3, 3, 0.753);
+}
+
+.compartilhados i {
+    color: rgba(8, 79, 160, 0.801);
+}
+
+.coracao i~p,
+.compartilhados i~p {
+    color: var(--cor2);
+}
+
+.linguagem h3 {
+    color: var(--cor0);
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+.linguagem p {
+    color: var(--cor2);
+    margin-left: 60px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.acesso a {
+    margin-left: 60px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.acesso h3 {
+    color: var(--cor0);
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+.topicos {
+    list-style: none;
+}
+
+.topicos h3 {
+    color: var(--cor0);
+    margin-left: 60px;
+    font-size: 20px;
+}
+
+.topicos li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: var(--cor2);
+    border-radius: 5px;
+}
+
+.li {
+    margin-left: 30px;
+}
+
+.rodape p {
+    text-align: center;
+    color: var(--cor2);
+}
+
+.rodape hr {
+    margin-left: 20px;
+    color: var(--cor0);
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        list-style-type: none;
+        margin-top: 10px;
+    }
+
+    .menu li {
+        display: block;
+        margin-left: 0;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .menu li a:hover {
+        color: var(--cor0);
+    }
+
+    .cabecalho .menu li {
+        font-size: 20px;
+    }
+
+    .main h2,
+    .main hr,
+    .descricao h3,
+    .descricao p,
+    .detalhes,
+    .detalhe h3,
+    .detalhe h3~p,
+    .icones,
+    .coracao i,
+    .compartilhados i,
+    .coracao i~p,
+    .compartilhados i~p,
+    .linguagem h3,
+    .linguagem p,
+    .acesso p,
+    .acesso h3,
+    .topicos h3 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .topicos li {
+        margin-left: 30px;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
