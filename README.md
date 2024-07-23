@@ -31,7 +31,3 @@ git clone https://github.com/marcosffp/PersonalWebsite-JSONServer.git
 ## Contato
 
 Se você quiser entrar em contato comigo, pode entrar em contato comigo em [Instagram](https://www.instagram.com/marcos.fkp).
-
-## Licença
-
-MIT
